@@ -13,10 +13,11 @@ export default function Medal() {
   <div>
     {medallasCristo.length > 0 ? (<div className="container d-flex justify-content-center flex-column align-items-center mt-5 mb-5">
     <h4><u>Medallas Ganadas</u></h4>
-    <div className="row">
+    <div className="row d-flex justify-content-center">
       {medallasCristo.map(({id,nombre,descripcion,imagen}) => (
-        <div key={id} className="card d-flex justify-content-center text-center bg-dark col-5 m-2">
-        <img src={imagen} alt={nombre} className="img-titulo" style={{width:"200px"}} />
+        <div key={id} className="card d-flex justify-content-center text-center bg-dark m-2
+        col-sm-8 col-md-6 col-lg-4">
+        <img src={imagen} alt={nombre} className="img-titulo"  />
         <div className="card-body text-light card-cont">
           <h4 className="card-title">{nombre}</h4>
           <p className="card-text small text-secondary">{descripcion}</p>
