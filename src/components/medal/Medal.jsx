@@ -13,12 +13,12 @@ export default function Medal() {
   <div>
     {medallasCristo.length > 0 ? (<div className="container 
     d-flex justify-content-center flex-column align-items-center 
-    mt-5 mb-5">
+    mt-3 mb-3">
     <h4><u>Medallas Ganadas</u></h4>
     <div className="row d-flex justify-content-center">
       {medallasCristo.map(({id,nombre,descripcion,imagen}) => (
         <div key={id} className="card d-flex justify-content-center text-center bg-dark m-1
-        col-4 col-sm-10 col-md-10 col-lg-4">
+        col-8 col-sm-10 col-md-10 col-lg-4">
           <div className="d-flex justify-content-center">
         <img src={imagen} alt={nombre} className="img-titulo" width="100px" />
         </div>

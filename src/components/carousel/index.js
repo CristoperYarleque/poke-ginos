@@ -17,7 +17,7 @@ export default function CarouselApp() {
             showThumbs={false}
             showStatus={false}
             infiniteLoop={true}
-            className={`${styles.carousel} mt-5`}
+            className={`${styles.carousel} mt-3`}
           >
             <div>
               <img src={imagen1} alt="poke" />
