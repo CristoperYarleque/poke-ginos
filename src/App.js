@@ -9,7 +9,7 @@ import Register from './components/register/Register';
 
 function App() {
 
-  const [value, setvalue] = useState(1)
+  const [value, setvalue] = useState(0)
 
   useEffect(() => {
   }, [value]);

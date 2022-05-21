@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from "react";
 import triste from "../../assets/triste.jpg"
+import medallasCristo from "../../data/medal-cristo"
 
 export default function Medal() {
 
@@ -10,16 +11,18 @@ export default function Medal() {
 
   return ( 
   <div>
-    {value == 0 ? (<div className="container d-flex justify-content-center flex-column align-items-center mt-5 mb-5">
+    {medallasCristo.length > 0 ? (<div className="container d-flex justify-content-center flex-column align-items-center mt-5 mb-5">
     <h4><u>Medallas Ganadas</u></h4>
     <div className="row">
-  <div className="card text-center bg-dark ">
-    <img src="" alt="PS4" className="img-titulo" />
-    <div className="card-body text-light card-cont">
-      <h4 className="card-title">czxc</h4>
-      <p className="card-text small text-secondary w-75 mx-auto">adsa</p>
-    </div>
-  </div>
+      {medallasCristo.map(({id,nombre,descripcion,imagen}) => (
+        <div key={id} className="card d-flex justify-content-center text-center bg-dark col-5 m-2">
+        <img src={imagen} alt={nombre} className="img-titulo" style={{width:"200px"}} />
+        <div className="card-body text-light card-cont">
+          <h4 className="card-title">{nombre}</h4>
+          <p className="card-text small text-secondary">{descripcion}</p>
+        </div>
+      </div>
+      ))}
   </div>
   </div>) : (<div className="container d-flex justify-content-center flex-column align-items-center mt-5 mb-5">
     <h4><u>Medallas Ganadas</u></h4>
