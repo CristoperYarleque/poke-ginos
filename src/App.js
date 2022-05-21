@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+
+import Inicio from "./views/Inicio"
+import Login from './components/login/Login';
 
 function App() {
+
+  const [value, setvalue] = useState(1)
+
+  useEffect(() => {
+  }, [value]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {value == 0 ? (
+        <Router>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Inicio />} />
+          </Routes>
+          <Footer />
+        </Router>
+      ) : (
+        <Router>
+          <Routes>
+            <Route path='/' element={<Login />} />
+          </Routes>
+        </Router>)}
     </div>
   );
 }
