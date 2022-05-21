@@ -1,9 +1,9 @@
 
 .global-container{
 	background-image: url("https://assets.pokemon.com//assets/cms2-es-es/img/misc/virtual-backgrounds/sword-shield/pokemon-in-the-wild.png");
-	height:100vh;
+	height:100%;
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
