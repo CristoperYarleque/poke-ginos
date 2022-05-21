@@ -16,7 +16,7 @@ export default function Medal() {
     <div className="row d-flex justify-content-center">
       {medallasCristo.map(({id,nombre,descripcion,imagen}) => (
         <div key={id} className="card d-flex justify-content-center text-center bg-dark m-2
-        col-sm-8 col-md-6 col-lg-4">
+        col-xs-8 col-sm-8 col-md-6 col-lg-4">
         <img src={imagen} alt={nombre} className="img-titulo"  />
         <div className="card-body text-light card-cont">
           <h4 className="card-title">{nombre}</h4>
