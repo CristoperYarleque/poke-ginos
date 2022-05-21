@@ -5,6 +5,7 @@ import Footer from './components/footer/Footer';
 
 import Inicio from "./views/Inicio"
 import Login from './components/login/Login';
+import Register from './components/register/Register';
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
         <Router>
           <Routes>
             <Route path='/' element={<Login />} />
+            <Route path='/register' element={<Register />} />
           </Routes>
         </Router>)}
     </div>
