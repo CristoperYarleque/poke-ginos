@@ -43,6 +43,8 @@ function App() {
     }
   }
 
+  const hola = 1
+
 
   useEffect(() => {
     validadorDeEmail()
@@ -50,7 +52,7 @@ function App() {
 
   return (
     <div>
-      {correo ? (
+      {hola == 1 ? (
         <Router>
           <Header />
           <Routes>
