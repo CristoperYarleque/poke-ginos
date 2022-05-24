@@ -56,7 +56,7 @@ function App() {
         <Router>
           <Header />
           <Routes>
-            <Route path='/index' element={<Inicio />} />
+            <Route path='/' element={<Inicio />} />
           </Routes>
           <Footer />
         </Router>
